@@ -129,9 +129,9 @@ function showDateTime(){
     readableHours = ("0" + readableHours).slice(-2)
     let readableMinutes = now.getMinutes()
     readableMinutes = ('0'+ readableMinutes).slice(-2)
-    console.log(`${month+1}/${date}/${year} ${readableHours}:${readableMinutes}`)
+    return `${month+1}/${date}/${year} ${readableHours}:${readableMinutes}`
 }
-showDateTime()
+console.log(showDateTime())
 
 let x = 3
 let y = 4
