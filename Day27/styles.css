@@ -1,0 +1,81 @@
+.fadein {
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+  }
+
+  body{
+    margin :0px 50px 0px 50px;
+  }
+  p {
+    font-size: xx-large;
+  }
+
+  #challenge{
+    display: inline-flex;
+    width: 20%;
+    height: 100px;
+    margin: 0 15px 0 15px;
+    font-size: medium;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+
+    animation:boxShrink 0.5s;
+  }
+  #challenge:hover{
+    animation: boxGrow 0.5s;
+    animation-fill-mode: forwards;
+    background-color: aqua;
+  }
+
+  #challenges{
+    display: flex;
+    justify-content: center;
+    height: auto;
+  }
+  .flexDisplay {
+    display : inline-flex;
+    width : fit-content
+  }
+
+  .titlesBox {
+    border-style: solid; 
+    padding : 30px 10px 30px 10px;
+    font-size: 25pt;
+    background-color: rgb(197, 154, 154);
+  }
+  @keyframes boxGrow {
+    0% {width: 20%; height: 100px;}
+    100% {width: 30%; height: 150px; font-size: large;}
+  }
+  @keyframes boxShrink {
+    0% {width: 30%; height: 150px;}
+    100% {width: 20%; height: 100px; font-size: medium;} 
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; left:0px;}
+    100% { opacity: 1; left:100px;}
+  }
+ 
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
