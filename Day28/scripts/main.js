@@ -25,7 +25,7 @@ function validateForm() {
     if(countrySelection == 'default'){
         errors.push('Select a country')
     }
-    if(isNaN(+points) == true || points == ''){
+    if(isNaN(+points) == true || points == '' || points < 0){
         errors.push('Enter a valid number')
     }
     return errors
@@ -35,16 +35,22 @@ function createRanking(firstName, lastName, country, points){
     newRanking = document.createElement('tr')
     newRanking.classList.add('ranking')
 
-    firstNameTd = document.createElement('td')
-    lastNameTd = document.createElement('td')
+    firstTd = document.createElement('td')
+        firstNameTr = document.createElement('tr')
+        dateTr = document.createElement('tr')
+        firstNameTr.textContent = `${firstName} ${lastName}`
+        dateTr.textContent = new Date().toLocaleDateString()
+        firstTd.append(firstNameTr, dateTr)
+    //lastNameTd = document.createElement('td')
     countryTd = document.createElement('td')
     pointsTd = document.createElement('td')
 
-    firstNameTd.textContent = firstName
-    lastNameTd.textContent = lastName
+    
+    
+    //lastNameTd.textContent = lastName
     countryTd.textContent = country
     pointsTd.textContent = points
-    newRanking.append(firstNameTd, lastNameTd, countryTd, pointsTd)
+    newRanking.append(firstTd, countryTd, pointsTd)
 
     deleteButton = document.createElement('button')
     addButton = document.createElement('button')
@@ -63,12 +69,12 @@ function createRanking(firstName, lastName, country, points){
     })
 
     addButton.addEventListener('click',e=>{
-        e.originalTarget.parentElement.children[3].innerText = +e.originalTarget.parentElement.children[3].innerText + 5
+        e.originalTarget.parentElement.children[2].innerText = +e.originalTarget.parentElement.children[2].innerText + 5
     })
     subtractButton.addEventListener('click',e=>{
-        e.originalTarget.parentElement.children[3].innerText = +e.originalTarget.parentElement.children[3].innerText - 5
-        if(+e.originalTarget.parentElement.children[3].innerText < 0){
-            e.originalTarget.parentElement.children[3].innerText = 0
+        e.originalTarget.parentElement.children[2].innerText = +e.originalTarget.parentElement.children[2].innerText - 5
+        if(+e.originalTarget.parentElement.children[2].innerText < 0){
+            e.originalTarget.parentElement.children[2].innerText = 0
         }
     })
     

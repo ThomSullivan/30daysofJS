@@ -9,9 +9,16 @@ h2{
 }
 .ranking{
     display: flex;
-    
+    align-items: center;
     border-style: solid;
-    padding :15px 0
+    padding :15px 0;
+    margin: 5px 0;
+}
+#myForm{
+   
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 table{
     margin-left: auto;
@@ -20,4 +27,11 @@ table{
 .delete-button{
     width: 25px;
     background-color: red;
+}
+button{
+    height: 25px;
+    margin: 0 10px 0 0;
+}
+td{
+    margin: 0 50px;
 }
