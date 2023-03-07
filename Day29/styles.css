@@ -1,0 +1,16 @@
+.fadeIn {
+    animation: fadeIn 5s;
+}
+.Roboto{
+    font-family: 'Roboto', sans-serif;
+}
+.Open_Sans{
+    font-family: 'Open Sans', sans-serif;
+}
+.Roboto{
+    font-family: 'Raleway', sans-serif;
+}
+@keyframes fadeIn {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
