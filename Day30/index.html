@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>30DaysOfJavaScript:30 </title>
+    <script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+   
+    <input id="searchValue"type="text" name="userSearch" placeholder="Search...">
+    <button id="search" type="button" >Search</button>
+    <div id="sortButtons">
+        <button id="alphaSortDesc" class="sortButton">Sort by name DESC</button>
+        <button id="alphaSortAsc" class="sortButton">Sort by name ASC</button>
+
+        <button id="popSortDesc" class="sortButton">Sort by population DESC</button>
+        <button id="popSortAsc" class="sortButton">Sort by population ASC</button>
+        <a href="#stat" class="sortButton"><button>DATA</button></a>
+    </div>
+    <div id="countries"></div>
+    <button id="population" type="button">Population</button>
+    <button id="languages" type="button">Languages</button>
+    <div id="stat"style="height: 500px"></div>
+    <a href="#search"><button>TOP</button></a>
+    <script src="./data/countries_data.js"></script>
+    <script src="./scripts/main.js"></script>
+
+</body>
+
+</html>
