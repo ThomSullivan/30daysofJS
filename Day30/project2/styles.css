@@ -1,0 +1,19 @@
+body{
+    color:blue;
+    text-align: center;
+}
+input{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    
+    font-size: xx-large;
+}
+button{
+    width: 150px;
+    height: 50px;
+}
+.error{
+    color: red;
+}
